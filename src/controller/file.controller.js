@@ -80,6 +80,7 @@ function getAccessToken(oAuth2Client, callback) {
  * @param {google.auth.OAuth2} auth An authorized OAuth2 client.
  */
 function listFiles(auth) {
+  globalRes.send("ayooo");
   const drive = google.drive({version: 'v3', auth});
   //globalRes.send("ayooo");
   var fileMetadata = {
@@ -137,7 +138,7 @@ const upload = async (req, res) => {
     fs.readFile('credentials.json', (err, content) => {
       if (err) return console.log('Error loading client secret file:', err);
       
-      globalRes.send("ayooo");
+      
       // Authorize a client with credentials, then call the Google Drive API.
       authorize(JSON.parse(content), listFiles);
     });
