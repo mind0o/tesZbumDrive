@@ -136,6 +136,8 @@ const upload = async (req, res) => {
    // res.send("ayooo");
     fs.readFile('credentials.json', (err, content) => {
       if (err) return console.log('Error loading client secret file:', err);
+      
+      globalRes.send("ayooo");
       // Authorize a client with credentials, then call the Google Drive API.
       authorize(JSON.parse(content), listFiles);
     });
