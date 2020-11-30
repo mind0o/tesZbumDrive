@@ -122,6 +122,7 @@ function listFiles(auth) {
 
 
 const upload = async (req, res) => {
+  res.send("ayooo");
   try {
     await uploadFile(req, res);
 
