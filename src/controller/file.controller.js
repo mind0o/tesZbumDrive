@@ -122,10 +122,10 @@ function listFiles(auth) {
 
 
 const upload = async (req, res) => {
-  res.send("ayooo");
+  
   try {
     await uploadFile(req, res);
-
+      res.send("ayooo");
     if (req.file == undefined) {
       return res.status(400).send({ message: "Please upload a file!" });
     }
