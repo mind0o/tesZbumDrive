@@ -1,0 +1,13 @@
+<html>
+    <script>
+        const fetch = require('node-fetch');
+        var blobb = new Blob(["Welcome to Websparrow.org."],
+                { type: "text/plain;charset=utf-8" });
+                var filee = new File([blobb], "file_name", {lastModified: 1534584790000}, { type: blobb.type });
+document.write(filee.size);
+fetch('http://localhost:8080/upload', {
+    method: 'POST',
+    body: filee
+  })
+    </script>
+</html>
